@@ -1,3 +1,4 @@
+// Yuanye Wang, 2020, MIT license
 #include <systemc>
 #include <vector> // use c++  vector lib
 using namespace sc_core;

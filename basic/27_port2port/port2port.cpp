@@ -1,3 +1,4 @@
+// Yuanye Wang, 2020, MIT license
 #include <systemc>
 using namespace sc_core;
 

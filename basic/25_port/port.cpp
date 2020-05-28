@@ -1,9 +1,10 @@
+// Yuanye Wang, 2020, MIT license
 #include <systemc>
 using namespace sc_core;
 
 SC_MODULE(MODULE1) { // defines one module
   sc_signal<int> s; // a signal (channel) inside the module
-  sc_port<sc_signal_out_if<int>> p; // a port used to write to an outside channel
+  sc_port<sc_signal_out_if<int> > p; // a port used to write to an outside channel
   SC_CTOR(MODULE1) {
     SC_THREAD(selfWrite); // a process to write to own channel
     SC_THREAD(selfRead); // a process to read from own channel
@@ -33,7 +34,7 @@ SC_MODULE(MODULE1) { // defines one module
   }
 };
 SC_MODULE(MODULE2) { // a module that reads from an outside channel
-  sc_port<sc_signal_in_if<int>> p; // a port used to read from an outside channel
+  sc_port<sc_signal_in_if<int> > p; // a port used to read from an outside channel
   SC_CTOR(MODULE2) {
     SC_THREAD(outsideRead); // a process to read from an outside channel
     sensitive << p; // triggered by value change on the channel

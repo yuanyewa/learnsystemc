@@ -1,3 +1,4 @@
+// Yuanye Wang, 2020, MIT license
 #include <systemc>
 #include <vector> // used to define a vector of ports
 using namespace sc_core;
